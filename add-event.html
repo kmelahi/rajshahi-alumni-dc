@@ -44,25 +44,31 @@
 
     
 <h2 class="mb-4">Add New Event</h2>
-<form action="https://formspree.io/f/xjkroayw" method="POST">
+<form action="https://hooks.zapier.com/hooks/catch/YOUR-ZAPIER-ID" method="POST">
   <div class="mb-3">
-    <label class="form-label">Event Title</label>
+    <label class="required">Event Title</label>
     <input type="text" name="title" class="form-control bg-light" required>
   </div>
+
   <div class="mb-3">
-    <label class="form-label">Event Date</label>
+    <label class="required">Event Date</label>
     <input type="date" name="date" class="form-control bg-light" required>
   </div>
+
   <div class="mb-3">
-    <label class="form-label">Venue</label>
+    <label class="required">Venue</label>
     <input type="text" name="venue" class="form-control bg-light" required>
   </div>
+
   <div class="mb-3">
-    <label class="form-label">Description</label>
+    <label class="required">Description</label>
     <textarea name="description" rows="5" class="form-control bg-light" required></textarea>
   </div>
-  <button type="submit" class="btn btn-success">Submit Event</button>
+
+  <button type="submit" class="btn btn-success me-2">Submit Event</button>
+  <button type="reset" class="btn btn-secondary" id="resetBtn" disabled>Reset</button>
 </form>
+
 
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
