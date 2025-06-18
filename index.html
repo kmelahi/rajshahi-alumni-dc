@@ -74,7 +74,7 @@
     <label for="graduation" class="form-label">Year of Graduation *</label>
     <input type="number" name="graduation_year" class="form-control bg-light" id="graduation" min="1950" max="2030" required>
   </div>
-  <button type="submit" class="btn btn-primary">Register</button>
+  <button type="submit" class="btn btn-primary me-2" id="submitBtn" disabled>Register</button>
   <button type="reset" class="btn btn-secondary" id="resetBtn" disabled>Reset</button>
 </form>
 
@@ -92,6 +92,7 @@
       }
     });
     resetBtn.disabled = !hasInput;
+    document.getElementById("submitBtn").disabled = !form.checkValidity();
     resetBtn.classList.toggle("btn-secondary", !hasInput);
     resetBtn.classList.toggle("btn-primary", hasInput);
   });
@@ -99,6 +100,7 @@
   form.addEventListener("reset", () => {
     setTimeout(() => {
       resetBtn.disabled = true;
+    document.getElementById("submitBtn").disabled = true;
       resetBtn.classList.remove("btn-primary");
       resetBtn.classList.add("btn-secondary");
     }, 10);
