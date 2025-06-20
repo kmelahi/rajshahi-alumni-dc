@@ -68,11 +68,19 @@
   </div>
   <div class="mb-3">
     <label for="email" class="required">Email Address</label>
-    <input type="email" name="email" class="form-control bg-light" id="email" required>
+    <input type="email" class="form-control" id="email" name="email"
+       placeholder="Enter your email" required
+       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+       title="Please enter a valid email address">
+
   </div>
   <div class="mb-3">
     <label for="phone" class="required">Phone Number</label>
-    <input type="tel" name="phone" class="form-control bg-light" id="phone" required>
+    <input type="tel" class="form-control" id="phone" name="phone"
+       placeholder="Enter your phone number" required
+       pattern="^[0-9\-\+\(\) ]{7,15}$"
+       title="Enter a valid phone number (7 to 15 digits)">
+
   </div>
   <div class="mb-3">
     <label for="department" class="required">Department</label>
